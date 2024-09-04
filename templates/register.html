@@ -1,0 +1,77 @@
+
+<div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+
+
+<div class="context">
+    {% extends 'base.html' %}
+    {% block title %}Register {% endblock %}
+
+    {% block content %}
+    <!-- {{ url_for('login')}} -->
+    <div class="box">
+        <div class="content">
+            <h2 id="cen">Register</h2><br><br>
+                
+                <form  onsubmit="password_check()" method = 'post'>
+                    <div class="row">
+                        <label for="name" class="col-lg-4 col-form-label">First Name:</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter your first name" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="name" class="col-lg-4 col-form-label">Last Name:</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="email" class="col-lg-4 col-form-label">Email:</label>
+                        <div class="col-lg-7">
+                            <input type="email" class="form-control" name="email_id" id="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="pwd" class="col-lg-4 col-form-label">Password:</label>
+                        <div class="col-lg-7">
+                            <input type="password" class="form-control" name="password" id="pwd" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="cpwd" class="col-lg-4 col-form-label">Confirm Password:</label>
+                        <div class="col-lg-7">
+                            <input type="password" class="form-control" name="confirm_pwd" id="cpwd" placeholder="Confirm password" required >
+                        </div>
+                    </div>
+                    <br>
+                    <p class="usr_error">{{ usr_error | safe }}</p>
+                    <div id="cen">
+                        <input type= "submit" class="submit btn btn-primary" value = "Submit">
+                    </div>
+                    
+                </form>
+        </div>
+    </div>
+    {% endblock %}
+    
+</div>
+
+
+

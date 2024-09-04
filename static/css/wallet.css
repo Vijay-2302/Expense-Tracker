@@ -1,0 +1,78 @@
+body{
+    background-color: #4FA095;
+    text-align: center;
+  }
+  
+.title{
+  font-family: sans-serif;
+  font-size: small;
+  background-color: #8EC3B0;
+  color: aliceblue;
+  padding: 1%;
+  margin-top: 40px;
+}
+  
+.expense{
+padding-left: 2%;
+}
+
+.add-expense{
+text-align: justify;
+font-family: sans-serif;
+padding: 5% 10%;
+margin: 100px;
+background-color: aliceblue;
+border-radius: 5%;
+width: 100%;
+}
+
+.sub-btn{
+text-align: center;
+}
+
+
+/* .rupee-ani */
+
+.ani{
+padding-left: 10%;
+}
+
+.form-head{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.rupee {
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  font-size: 150px;
+  color: black;
+
+  -webkit-animation: movement 1500ms infinite ease-in-out;
+  animation: movement 1500ms infinite ease-in-out;
+}
+
+
+.add-expense .box{
+  text-align: right;
+}
+
+@-webkit-keyframes movement {}
+
+@keyframes movement {
+  0%{
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    -webkit-transform: translateY(-50px) scale(2);
+    transform: translateY(-50px) scale(2);
+  }
+  100% {
+    -webkit-transform: translateY(-100px) scale(0);
+    transform: translateY(-100px) scale(0);  
+  }
+}
